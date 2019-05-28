@@ -2,6 +2,7 @@
 
 class NearestNeighbour
 {
+    /** @var array  */
     private $distances;
 
     /** @var array Boolean */
@@ -9,6 +10,9 @@ class NearestNeighbour
 
     /** @var array City */
     private $cities;
+
+    /** @var array */
+    private $tour;
 
     /**
      * NearestNeighbour constructor.
@@ -33,8 +37,29 @@ class NearestNeighbour
         }
     }
 
+    private function getMinimumDistancePosition($cityDistances) {
+        return array_keys($cityDistances, min(array_filter($cityDistances)));0
+    }
+
     /**
-     * @return array
+     * @return array $tour
+     */
+    public function getTour() {
+        $this->tour = array(
+            "city" => $cities[0]->getName(),
+            "position" => 0,
+            "distance" = 0
+        );
+
+        $i = 0;
+        while (sizeOf($this->tour) <= sizeOf($cities)) {
+
+        }
+
+    }
+
+    /**
+     * @return array $distances;
      */
     public function getDistances() {
         return $this->distances;
