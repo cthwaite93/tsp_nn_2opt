@@ -8,6 +8,13 @@ class City
 
     const EARTH_RADIUS = 6371000;
 
+    /**
+     * City constructor.
+     *
+     * @param String $name
+     * @param Float $lat
+     * @param Float $lon
+     */
     public function __construct($name, $lat, $lon)
     {
         $this->name = $name;
@@ -77,7 +84,7 @@ class City
      *
      * @return Float
      */
-    public function distanceToCity(City $c)
+    public function getDistanceToCity(City $c)
     {
         $thisLatRad = deg2rad($this->lat);
         $thisLonRad = deg2rad($this->lon);
